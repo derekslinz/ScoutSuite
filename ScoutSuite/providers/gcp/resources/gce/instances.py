@@ -65,15 +65,15 @@ class Instances(GCPCompositeResources):
         return description if description else 'N/A'
 
     def _is_block_project_ssh_keys_enabled(self, raw_instance):
-        return raw_instance['metadata'].get('block-project-ssh-keys').lower() == 'true'
+        return raw_instance['metadata'].get('block-project-ssh-keys', '').lower() == 'true'
 
     def _is_oslogin_enabled(self, raw_instance):
         instance_logging_enabled = raw_instance['metadata'].get('enable-oslogin', 'TRUE')
-        project_logging_enabled = raw_instance.get('commonInstanceMetadata', {}).get('enable-oslogin')
+        project_logging_enabled = raw_instance.get('commonInstanceMetadata', {}).get('enable-oslogin', '')
         return instance_logging_enabled.upper() == 'TRUE' and project_logging_enabled.upper() == 'TRUE'
 
     def _is_serial_port_enabled(self, raw_instance):
-        return raw_instance['metadata'].get('serial-port-enable').lower() == 'true'
+        return raw_instance['metadata'].get('serial-port-enable', '').lower() == 'true'
 
     def _is_default_service_account(self, service_account: str):
         if '-compute@developer.gserviceaccount.com' in service_account:
