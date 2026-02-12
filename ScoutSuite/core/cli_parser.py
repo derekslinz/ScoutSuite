@@ -223,7 +223,7 @@ class ScoutSuiteArgumentParser:
         aliyun_parser = parser.add_argument_group('Authentication modes')
         aliyun_auth_params = parser.add_argument_group('Authentication parameters')
 
-        aliyun_auth_modes = aliyun_parser.add_mutually_exclusive_group(required=True)
+        aliyun_auth_modes = aliyun_parser.add_mutually_exclusive_group(required=False)
 
         aliyun_auth_modes.add_argument('--access-keys',
                                        action='store_true',
