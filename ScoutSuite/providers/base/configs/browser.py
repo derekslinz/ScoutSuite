@@ -99,7 +99,10 @@ def get_value_at(all_info, current_path, key, to_string=False):
                 elif target_obj is None:
                     pass
                 else:
-                    target_obj = target_obj.get(p)
+                    if type(target_obj) == dict:
+                        target_obj = target_obj.get(p)
+                    else:
+                        target_obj = getattr(target_obj, p, None)
             except Exception as e:
                 print_exception(f'Unable to get \"{p}\" from target object \"{target_obj}\" in path \"{target_path}\": {e}',
                                 additional_details={'current_path': current_path,

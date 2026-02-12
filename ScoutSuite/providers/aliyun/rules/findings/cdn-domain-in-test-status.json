@@ -1,0 +1,16 @@
+{
+    "description": "CDN Domain in Test Status",
+    "rationale": "CDN domains in test status should not be used for production traffic. Verify that test domains are appropriate or promote them to production status.",
+    "dashboard_name": "CDN Domains",
+    "display_path": "cdn.domains.domain_name",
+    "path": "cdn.domains.domain_name",
+    "conditions": [
+        "and",
+        [
+            "cdn.domains.domain_name.status",
+            "equal",
+            "testing"
+        ]
+    ],
+    "id_suffix": "domain_name"
+}

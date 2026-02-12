@@ -7,6 +7,9 @@ from ScoutSuite.providers.aliyun.resources.ecs.base import ECS
 from ScoutSuite.providers.aliyun.resources.rds.base import RDS
 from ScoutSuite.providers.aliyun.resources.kms.base import KMS
 from ScoutSuite.providers.aliyun.resources.oss.base import OSS
+from ScoutSuite.providers.aliyun.resources.cdn.base import CDN
+from ScoutSuite.providers.aliyun.resources.slb.base import SLB
+from ScoutSuite.providers.aliyun.resources.autoscaling.base import AutoScaling
 
 
 
@@ -23,6 +26,9 @@ class AliyunServicesConfig(BaseServicesConfig):
         self.vpc = VPC(facade)
         self.kms = KMS(facade)
         self.oss = OSS(facade)
+        self.cdn = CDN(facade)
+        self.slb = SLB(facade)
+        self.autoscaling = AutoScaling(facade)
 
     def _is_provider(self, provider_name):
         return provider_name == 'aliyun'

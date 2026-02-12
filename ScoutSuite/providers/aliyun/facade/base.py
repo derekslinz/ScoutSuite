@@ -10,6 +10,9 @@ from ScoutSuite.providers.aliyun.facade.ram import RAMFacade
 from ScoutSuite.providers.aliyun.facade.rds import RDSFacade
 from ScoutSuite.providers.aliyun.facade.vpc import VPCFacade
 from ScoutSuite.providers.aliyun.facade.oss import OSSFacade
+from ScoutSuite.providers.aliyun.facade.cdn import CDNFacade
+from ScoutSuite.providers.aliyun.facade.slb import SLBFacade
+from ScoutSuite.providers.aliyun.facade.autoscaling import AutoScalingFacade
 from ScoutSuite.providers.utils import run_concurrently
 
 
@@ -27,6 +30,9 @@ class AliyunFacade:
         self.vpc = VPCFacade(self._credentials)
         self.kms = KMSFacade(self._credentials)
         self.oss = OSSFacade(self._credentials)
+        self.cdn = CDNFacade(self._credentials)
+        self.slb = SLBFacade(self._credentials)
+        self.autoscaling = AutoScalingFacade(self._credentials)
 
     async def build_region_list(self, service: str, chosen_regions=None):
 

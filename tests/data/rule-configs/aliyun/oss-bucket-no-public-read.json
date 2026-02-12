@@ -1,0 +1,12 @@
+{
+    "oss": {
+        "buckets": {
+            "my-public-bucket": {
+                "acl": {
+                    "grant": "public-read"
+                },
+                "name": "my-public-bucket"
+            }
+        }
+    }
+}

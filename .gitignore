@@ -73,4 +73,4 @@ report-*
 #Profiling output
 *.prof
 
-!docker/bin
+!docker/bin.venv

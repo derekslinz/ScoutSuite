@@ -1,0 +1,16 @@
+{
+    "description": "Auto Scaling Group Without Health Check",
+    "rationale": "Auto Scaling groups should have health checks enabled to ensure unhealthy instances are replaced automatically.",
+    "dashboard_name": "Scaling Groups",
+    "display_path": "autoscaling.regions.id.scaling_groups.scaling_group_id",
+    "path": "autoscaling.regions.id.scaling_groups.scaling_group_id",
+    "conditions": [
+        "and",
+        [
+            "autoscaling.regions.id.scaling_groups.scaling_group_id.health_check_type",
+            "equal",
+            ""
+        ]
+    ],
+    "id_suffix": "scaling_group_id"
+}

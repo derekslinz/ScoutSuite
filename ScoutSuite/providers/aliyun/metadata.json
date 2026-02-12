@@ -47,6 +47,18 @@
           "path": "services.ecs.regions.id.instances"
         }
       }
+    },
+    "autoscaling": {
+      "resources": {
+        "scaling_groups": {
+          "cols": 2,
+          "path": "services.autoscaling.regions.id.scaling_groups"
+        },
+        "scaling_configurations": {
+          "cols": 2,
+          "path": "services.autoscaling.regions.id.scaling_configurations"
+        }
+      }
     }
   },
   "database": {
@@ -75,6 +87,22 @@
         "vpcs": {
           "cols": 2,
           "path": "services.vpc.regions.id.vpcs"
+        }
+      }
+    },
+    "slb": {
+      "resources": {
+        "load_balancers": {
+          "cols": 2,
+          "path": "services.slb.regions.id.load_balancers"
+        }
+      }
+    },
+    "cdn": {
+      "resources": {
+        "domains": {
+          "cols": 2,
+          "path": "services.cdn.domains"
         }
       }
     }

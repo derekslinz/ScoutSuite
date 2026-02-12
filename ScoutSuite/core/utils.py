@@ -30,6 +30,7 @@ def recurse(all_info, current_info, target_path, current_path, config, add_suffi
     :param add_suffix:      ?
     :return:
     """
+    print(f'current_info: {current_info}, target_path: {target_path}')
     results = []
     if len(target_path) == 0:
         # Dashboard: count the number of processed resources here
@@ -64,6 +65,10 @@ def recurse(all_info, current_info, target_path, current_path, config, add_suffi
                 split_current_info = current_info[key]
                 results = results + recurse(all_info, split_current_info, split_target_path, split_current_path,
                                             config, add_suffix)
+    elif hasattr(current_info, attribute):
+        split_path = copy.deepcopy(current_path)
+        split_path.append(attribute)
+        results = results + recurse(all_info, getattr(current_info, attribute), target_path, split_path, config, add_suffix)
     # To handle lists properly, I would have to make sure the list is properly ordered and I can use the index to
     # consistently access an object... Investigate (or do not use lists)
     elif type(current_info) == list:

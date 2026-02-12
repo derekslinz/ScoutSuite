@@ -49,7 +49,7 @@ class ProcessingEngine:
                 try:
                     setattr(rule, 'checked_items', 0)
                     cloud_provider.services[service][self.ruleset.rule_type][rule.key]['items'] = recurse(
-                        cloud_provider.services, cloud_provider.services, path, [], rule, True)
+                        cloud_provider, cloud_provider, path, [], rule, True)
                     if skip_dashboard:
                         continue
                     cloud_provider.services[service][self.ruleset.rule_type][rule.key]['dashboard_name'] = \

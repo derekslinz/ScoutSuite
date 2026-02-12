@@ -1,0 +1,12 @@
+{
+    "oss.buckets.my-public-bucket": {
+        "flagged": true,
+        "results": [
+            {
+                "level": "danger",
+                "description": "OSS Bucket with Public Read ACL",
+                "rationale": "OSS buckets with public read ACLs can be read by anyone. This can lead to data leakage."
+            }
+        ]
+    }
+}

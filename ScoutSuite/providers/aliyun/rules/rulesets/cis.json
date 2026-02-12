@@ -1,5 +1,5 @@
 {
-    "about": "Default ruleset for Alibaba Cloud.",
+    "about": "CIS ruleset for Alibaba Cloud.",
     "rules": {
         "actiontrail-not-configured.json": [
             {
@@ -96,13 +96,13 @@
         ],
         "ram-user-unused-api-key.json": [
             {
-                "enabled": false,
+                "enabled": true,
                 "level": "warning"
             }
         ],
         "ram-user-unused-console-password.json": [
             {
-                "enabled": false,
+                "enabled": true,
                 "level": "warning"
             }
         ],
@@ -114,38 +114,14 @@
         ],
         "ram-user-with-old-api-key.json": [
             {
-                "enabled": false,
-                "level": "warning"
-            }
-        ],
-        "cdn-domain-without-https.json": [
-            {
                 "enabled": true,
                 "level": "warning"
             }
         ],
-        "cdn-domain-in-test-status.json": [
+        "oss-bucket-no-public-read.json": [
             {
                 "enabled": true,
-                "level": "warning"
-            }
-        ],
-        "slb-load-balancer-without-security-group.json": [
-            {
-                "enabled": true,
-                "level": "warning"
-            }
-        ],
-        "autoscaling-group-without-health-check.json": [
-            {
-                "enabled": true,
-                "level": "warning"
-            }
-        ],
-        "autoscaling-group-with-insufficient-capacity.json": [
-            {
-                "enabled": true,
-                "level": "warning"
+                "level": "danger"
             }
         ]
     }

@@ -1,0 +1,16 @@
+{
+    "description": "Auto Scaling Group with Insufficient Capacity",
+    "rationale": "Auto Scaling groups should maintain a minimum capacity to ensure high availability and resilience.",
+    "dashboard_name": "Scaling Groups",
+    "display_path": "autoscaling.regions.id.scaling_groups.scaling_group_id",
+    "path": "autoscaling.regions.id.scaling_groups.scaling_group_id",
+    "conditions": [
+        "and",
+        [
+            "autoscaling.regions.id.scaling_groups.scaling_group_id.min_size",
+            "lessThan",
+            "2"
+        ]
+    ],
+    "id_suffix": "scaling_group_id"
+}

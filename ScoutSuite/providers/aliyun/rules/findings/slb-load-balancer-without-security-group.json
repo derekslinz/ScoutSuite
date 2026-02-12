@@ -1,0 +1,16 @@
+{
+    "description": "SLB Load Balancer without Security Group",
+    "rationale": "Load balancers should be associated with security groups to control network access and enforce security policies.",
+    "dashboard_name": "Load Balancers",
+    "display_path": "slb.regions.id.load_balancers.load_balancer_id",
+    "path": "slb.regions.id.load_balancers.load_balancer_id",
+    "conditions": [
+        "and",
+        [
+            "slb.regions.id.load_balancers.load_balancer_id.security_group_id",
+            "null",
+            ""
+        ]
+    ],
+    "id_suffix": "load_balancer_id"
+}
