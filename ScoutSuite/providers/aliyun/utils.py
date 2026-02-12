@@ -6,7 +6,7 @@ from ScoutSuite.core.console import print_exception
 
 def get_client(credentials, region=None):
     try:
-        client = AcsClient(credential=credentials.credentials, region_id=region if region else 'cn-hangzhou')
+        client = AcsClient(credential=credentials.credentials, region_id=region if region else 'ap-southeast-1')
         return client
 
     except Exception as e:

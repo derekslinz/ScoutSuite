@@ -1,7 +1,8 @@
 from ScoutSuite.providers.aliyun.authentication_strategy import AliyunCredentials
 from ScoutSuite.providers.aliyun.facade.utils import get_response
 
-from aliyunsdkactiontrail.request.v20171204 import DescribeTrailsRequest
+from alibabacloud_actiontrail20200706 import client
+#from aliyunsdkactiontrail.request.v20171204 import DescribeTrailsRequest
 
 from ScoutSuite.providers.aliyun.utils import get_client
 
