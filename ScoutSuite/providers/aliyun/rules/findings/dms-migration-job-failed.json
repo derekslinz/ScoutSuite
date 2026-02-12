@@ -1,0 +1,21 @@
+{
+  "description": "Ensure DMS migration jobs complete successfully",
+  "rationale": "Failed migration jobs indicate data transfer issues that need investigation",
+  "remediation": "Monitor migration job status and investigate any failures",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "DMS Enterprise",
+  "path": "dmsenterprises.migration_jobs",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "status",
+      "eq",
+      "FAILED"
+    ]
+  ],
+  "id_suffix": "dms_migration_job_failed",
+  "level": "danger",
+  "resource_id_template": "{MigrationJobId}"
+}

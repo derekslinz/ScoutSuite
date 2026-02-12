@@ -1,0 +1,42 @@
+{
+  "name": "DRDS Encryption Disabled",
+  "description": "DRDS instances should have encryption at rest enabled",
+  "id": "drds-encryption-disabled",
+  "remediation": "Enable encryption at rest for DRDS instances",
+  "display_category": "Encryption",
+  "severity": "danger",
+  "resource_idempotency_attributes": ["arn:aliyun:drds:{region}:{account-id}:instance/{instance-id}"],
+  "rules": {
+    "filter": [
+      ["drds", "instances", "{instance_id}", "EncryptionType"]
+    ],
+    "conditions": ["empty"]
+  },
+  "tests": [
+    {
+      "name": "DRDS Encryption Disabled Test",
+      "results": {
+        "pass_resource": {
+          "drds": {
+            "instances": {
+              "inst-1": {
+                "arn": "arn:aliyun:drds:cn-hangzhou:123456789012:instance/inst-1",
+                "EncryptionType": "ssl"
+              }
+            }
+          }
+        },
+        "fail_resource": {
+          "drds": {
+            "instances": {
+              "inst-1": {
+                "arn": "arn:aliyun:drds:cn-hangzhou:123456789012:instance/inst-1",
+                "EncryptionType": null
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

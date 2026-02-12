@@ -1,0 +1,20 @@
+{
+  "description": "Ensure DNS domains have DNSSEC enabled",
+  "rationale": "DNSSEC protects DNS from spoofing and man-in-the-middle attacks",
+  "remediation": "Enable DNSSEC for critical domains in AliDNS",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "AliDNS",
+  "path": "alidns.domains",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "dnssecStatus",
+      "false"
+    ]
+  ],
+  "id_suffix": "alidns_dnssec_disabled",
+  "level": "warning",
+  "resource_id_template": "{DomainName}"
+}

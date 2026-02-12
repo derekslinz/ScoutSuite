@@ -1,0 +1,20 @@
+{
+  "description": "Ensure Elasticsearch clusters have encryption enabled",
+  "rationale": "Encryption at rest ensures that sensitive data stored in Elasticsearch is protected from unauthorized access",
+  "remediation": "Enable encryption at rest for Elasticsearch clusters",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "Elasticsearch",
+  "path": "elasticsearch.instances",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "encryptionAtRest",
+      "false"
+    ]
+  ],
+  "id_suffix": "elasticsearch_encryption_disabled",
+  "level": "danger",
+  "resource_id_template": "{instanceId}"
+}

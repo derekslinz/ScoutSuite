@@ -1,0 +1,16 @@
+{
+    "description": "Event Bus without Dead Letter Queue",
+    "rationale": "Event buses should have a Dead Letter Queue configured to handle messages that cannot be processed.",
+    "dashboard_name": "Event Buses",
+    "display_path": "eventbridge.event_buses.id",
+    "path": "eventbridge.event_buses.id",
+    "conditions": [
+        "and",
+        [
+            "eventbridge.event_buses.id.dlq_arn",
+            "null",
+            ""
+        ]
+    ],
+    "id_suffix": "name"
+}

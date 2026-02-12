@@ -1,0 +1,21 @@
+{
+  "description": "Ensure ExpressConnect connections are in active status",
+  "rationale": "Inactive connections may indicate misconfiguration or network issues",
+  "remediation": "Verify and activate ExpressConnect connections",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "ExpressConnect",
+  "path": "expressconnect.physical_connections",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "Status",
+      "neq",
+      "Confirmed"
+    ]
+  ],
+  "id_suffix": "expressconnect_inactive",
+  "level": "warning",
+  "resource_id_template": "{PhysicalConnectionId}"
+}

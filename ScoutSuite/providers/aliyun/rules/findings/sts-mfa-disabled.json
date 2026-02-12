@@ -1,0 +1,20 @@
+{
+  "description": "Ensure MFA is enabled for account root access",
+  "rationale": "Multi-factor authentication adds an additional layer of security to the account",
+  "remediation": "Enable MFA for all administrative accounts",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "STS",
+  "path": "sts.identity",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "mfaEnabled",
+      "false"
+    ]
+  ],
+  "id_suffix": "sts_mfa_disabled",
+  "level": "danger",
+  "resource_id_template": "{account_id}"
+}

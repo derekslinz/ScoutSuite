@@ -1,0 +1,42 @@
+{
+  "name": "Kafka Encryption Disabled",
+  "description": "Kafka instances should have encryption at rest enabled",
+  "id": "kafka-encryption-disabled",
+  "remediation": "Enable encryption at rest for Kafka instances",
+  "display_category": "Encryption",
+  "severity": "danger",
+  "resource_idempotency_attributes": ["arn:aliyun:kafka:{region}:{account-id}:instance/{instance-id}"],
+  "rules": {
+    "filter": [
+      ["kafka", "instances", "{instance_id}", "EnableEncryption"]
+    ],
+    "conditions": ["false"]
+  },
+  "tests": [
+    {
+      "name": "Kafka Encryption Disabled Test",
+      "results": {
+        "pass_resource": {
+          "kafka": {
+            "instances": {
+              "inst-1": {
+                "arn": "arn:aliyun:kafka:cn-hangzhou:123456789012:instance/inst-1",
+                "EnableEncryption": true
+              }
+            }
+          }
+        },
+        "fail_resource": {
+          "kafka": {
+            "instances": {
+              "inst-1": {
+                "arn": "arn:aliyun:kafka:cn-hangzhou:123456789012:instance/inst-1",
+                "EnableEncryption": false
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

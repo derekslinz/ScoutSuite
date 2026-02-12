@@ -1,0 +1,20 @@
+{
+  "description": "Ensure ACK clusters have RBAC enabled",
+  "rationale": "RBAC controls who can perform what actions on the cluster",
+  "remediation": "Enable RBAC for all ACK clusters",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "ACK",
+  "path": "ack.clusters",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "rbacEnabled",
+      "false"
+    ]
+  ],
+  "id_suffix": "ack_rbac_disabled",
+  "level": "danger",
+  "resource_id_template": "{cluster_id}"
+}

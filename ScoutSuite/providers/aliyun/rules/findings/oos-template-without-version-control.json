@@ -1,0 +1,16 @@
+{
+    "description": "CloudOps Template without Proper Version Control",
+    "rationale": "Templates should have version control enabled to track changes and maintain audit trail.",
+    "dashboard_name": "Templates",
+    "display_path": "oos.templates.id",
+    "path": "oos.templates.id",
+    "conditions": [
+        "and",
+        [
+            "oos.templates.id.version",
+            "null",
+            ""
+        ]
+    ],
+    "id_suffix": "name"
+}

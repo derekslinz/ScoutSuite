@@ -1,0 +1,20 @@
+{
+  "description": "Ensure ARMS instances have alert configuration",
+  "rationale": "Alert configuration ensures administrators are notified of critical application issues",
+  "remediation": "Configure alerts for ARMS monitoring instances",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "ARMS",
+  "path": "arms.monitoring_instances",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "alertConfigured",
+      "false"
+    ]
+  ],
+  "id_suffix": "arms_no_alert_configuration",
+  "level": "warning",
+  "resource_id_template": "{InstanceId}"
+}

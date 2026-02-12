@@ -1,0 +1,42 @@
+{
+  "name": "Log Service Retention Disabled",
+  "description": "Log Service projects should have appropriate retention policies configured",
+  "id": "log-retention-disabled",
+  "remediation": "Configure retention policies for Log Service projects",
+  "display_category": "Logging",
+  "severity": "warning",
+  "resource_idempotency_attributes": ["arn:aliyun:log:cn-hangzhou:{account-id}:project/{project-name}"],
+  "rules": {
+    "filter": [
+      ["log", "projects", "{project_name}", "retentionDays"]
+    ],
+    "conditions": ["<", 30]
+  },
+  "tests": [
+    {
+      "name": "Log Retention Disabled Test",
+      "results": {
+        "pass_resource": {
+          "log": {
+            "projects": {
+              "proj-1": {
+                "arn": "arn:aliyun:log:cn-hangzhou:123456789012:project/proj-1",
+                "retentionDays": 90
+              }
+            }
+          }
+        },
+        "fail_resource": {
+          "log": {
+            "projects": {
+              "proj-1": {
+                "arn": "arn:aliyun:log:cn-hangzhou:123456789012:project/proj-1",
+                "retentionDays": 7
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

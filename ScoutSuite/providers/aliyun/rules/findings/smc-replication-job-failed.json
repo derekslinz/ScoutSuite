@@ -1,0 +1,16 @@
+{
+    "description": "Server Migration with Failed Status",
+    "rationale": "Server migrations should be monitored for failures and issues should be resolved promptly.",
+    "dashboard_name": "Replication Jobs",
+    "display_path": "smc.replication_jobs.id",
+    "path": "smc.replication_jobs.id",
+    "conditions": [
+        "and",
+        [
+            "smc.replication_jobs.id.status",
+            "equal",
+            "Failed"
+        ]
+    ],
+    "id_suffix": "job_id"
+}

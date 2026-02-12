@@ -1,0 +1,20 @@
+{
+  "description": "Ensure domain registration auto renewal is enabled",
+  "rationale": "Enabling auto renewal for domains helps prevent accidental domain expiration which could result in service disruption",
+  "remediation": "Enable auto renewal in domain management console",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "Domain",
+  "path": "domain.domains",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "AutoRenew",
+      "false"
+    ]
+  ],
+  "id_suffix": "domain_auto_renewal_disabled",
+  "level": "warning",
+  "resource_id_template": "{DomainName}"
+}

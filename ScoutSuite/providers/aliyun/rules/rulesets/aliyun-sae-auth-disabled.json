@@ -1,0 +1,42 @@
+{
+  "name": "SAE Auth Disabled",
+  "description": "SAE applications should enforce authentication",
+  "id": "sae-auth-disabled",
+  "remediation": "Enable authentication enforcement for SAE applications",
+  "display_category": "Security Policies",
+  "severity": "danger",
+  "resource_idempotency_attributes": ["arn:aliyun:sae:{region}:{account-id}:application/{application-id}"],
+  "rules": {
+    "filter": [
+      ["sae", "applications", "{application_id}", "EnableAuth"]
+    ],
+    "conditions": ["false"]
+  },
+  "tests": [
+    {
+      "name": "SAE Auth Disabled Test",
+      "results": {
+        "pass_resource": {
+          "sae": {
+            "applications": {
+              "app-1": {
+                "arn": "arn:aliyun:sae:cn-hangzhou:123456789012:application/app-1",
+                "EnableAuth": true
+              }
+            }
+          }
+        },
+        "fail_resource": {
+          "sae": {
+            "applications": {
+              "app-1": {
+                "arn": "arn:aliyun:sae:cn-hangzhou:123456789012:application/app-1",
+                "EnableAuth": false
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

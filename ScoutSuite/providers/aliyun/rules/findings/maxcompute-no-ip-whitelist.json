@@ -1,0 +1,20 @@
+{
+  "description": "Ensure MaxCompute projects have IP whitelist configured",
+  "rationale": "IP whitelisting controls which networks can access the project",
+  "remediation": "Configure IP whitelist for MaxCompute projects",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "MaxCompute",
+  "path": "maxcompute.projects",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "ipWhitelistEnabled",
+      "false"
+    ]
+  ],
+  "id_suffix": "maxcompute_no_ip_whitelist",
+  "level": "warning",
+  "resource_id_template": "{Name}"
+}

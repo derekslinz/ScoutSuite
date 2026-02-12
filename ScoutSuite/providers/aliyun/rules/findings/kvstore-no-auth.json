@@ -1,0 +1,20 @@
+{
+  "description": "Ensure KVStore instances require password authentication",
+  "rationale": "Password authentication prevents unauthorized access to cached data",
+  "remediation": "Set strong passwords for all KVStore instances",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "KVStore",
+  "path": "kvstore.instances",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "authEnabled",
+      "false"
+    ]
+  ],
+  "id_suffix": "kvstore_no_auth",
+  "level": "danger",
+  "resource_id_template": "{InstanceId}"
+}

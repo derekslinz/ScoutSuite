@@ -48,6 +48,22 @@
         }
       }
     },
+    "ack": {
+      "resources": {
+        "clusters": {
+          "cols": 2,
+          "path": "services.ack.regions.id.clusters"
+        }
+      }
+    },
+    "sae": {
+      "resources": {
+        "applications": {
+          "cols": 2,
+          "path": "services.sae.regions.id.applications"
+        }
+      }
+    },
     "autoscaling": {
       "resources": {
         "scaling_groups": {
@@ -67,6 +83,62 @@
         "instances": {
           "cols": 2,
           "path": "services.rds.regions.id.instances"
+        }
+      }
+    },
+    "das": {
+      "resources": {
+        "instances": {
+          "cols": 2,
+          "path": "services.das.regions.id.instances"
+        }
+      }
+    },
+    "adb": {
+      "resources": {
+        "clusters": {
+          "cols": 2,
+          "path": "services.adb.regions.id.clusters"
+        }
+      }
+    },
+    "dds": {
+      "resources": {
+        "instances": {
+          "cols": 2,
+          "path": "services.dds.regions.id.instances"
+        }
+      }
+    },
+    "mongodb": {
+      "resources": {
+        "instances": {
+          "cols": 2,
+          "path": "services.mongodb.regions.id.instances"
+        }
+      }
+    },
+    "drds": {
+      "resources": {
+        "instances": {
+          "cols": 2,
+          "path": "services.drds.regions.id.instances"
+        }
+      }
+    },
+    "ots": {
+      "resources": {
+        "instances": {
+          "cols": 2,
+          "path": "services.ots.regions.id.instances"
+        }
+      }
+    },
+    "polardbx": {
+      "resources": {
+        "instances": {
+          "cols": 2,
+          "path": "services.polardbx.regions.id.instances"
         }
       }
     }
@@ -105,6 +177,46 @@
           "path": "services.cdn.domains"
         }
       }
+    },
+    "alidns": {
+      "resources": {
+        "domains": {
+          "cols": 2,
+          "path": "services.alidns.domains"
+        }
+      }
+    },
+    "privatelink": {
+      "resources": {
+        "vpc_endpoint_services": {
+          "cols": 2,
+          "path": "services.privatelink.regions.id.vpc_endpoint_services"
+        },
+        "vpc_endpoints": {
+          "cols": 2,
+          "path": "services.privatelink.regions.id.vpc_endpoints"
+        }
+      }
+    },
+    "vpcpeer": {
+      "resources": {
+        "peering_connections": {
+          "cols": 2,
+          "path": "services.vpcpeer.regions.id.peering_connections"
+        }
+      }
+    },
+    "expressconnect": {
+      "resources": {
+        "physical_connections": {
+          "cols": 2,
+          "path": "services.expressconnect.regions.id.physical_connections"
+        },
+        "virtual_borders": {
+          "cols": 2,
+          "path": "services.expressconnect.regions.id.virtual_borders"
+        }
+      }
     }
   },
   "management": {
@@ -113,6 +225,190 @@
         "trails": {
           "cols": 1,
           "path": "services.actiontrail.trails"
+        }
+      }
+    },
+    "sts": {
+      "resources": {
+        "identity": {
+          "cols": 1,
+          "path": "services.sts.identity"
+        }
+      }
+    },
+    "domain": {
+      "resources": {
+        "domains": {
+          "cols": 2,
+          "path": "services.domain.regions.id.domains"
+        }
+      }
+    },
+    "acm": {
+      "resources": {
+        "certificates": {
+          "cols": 2,
+          "path": "services.acm.certificates"
+        }
+      }
+    }
+  },
+  "search": {
+    "elasticsearch": {
+      "resources": {
+        "instances": {
+          "cols": 2,
+          "path": "services.elasticsearch.regions.id.instances"
+        }
+      }
+    }
+  },
+  "logging": {
+    "log": {
+      "resources": {
+        "projects": {
+          "cols": 2,
+          "path": "services.log.projects"
+        }
+      }
+    }
+  },
+  "messaging": {
+    "alikafka": {
+      "resources": {
+        "instances": {
+          "cols": 2,
+          "path": "services.alikafka.regions.id.instances"
+        }
+      }
+    },
+    "kafka": {
+      "resources": {
+        "instances": {
+          "cols": 2,
+          "path": "services.kafka.regions.id.instances"
+        }
+      }
+    },
+    "rocketmq": {
+      "resources": {
+        "instances": {
+          "cols": 2,
+          "path": "services.rocketmq.regions.id.instances"
+        }
+      }
+    },
+    "mts": {
+      "resources": {
+        "pipelines": {
+          "cols": 2,
+          "path": "services.mts.regions.id.pipelines"
+        }
+      }
+    }
+  },
+  "monitoring": {
+    "cloudsiem": {
+      "resources": {
+        "data_sources": {
+          "cols": 2,
+          "path": "services.cloudsiem.data_sources"
+        }
+      }
+    },
+    "arms": {
+      "resources": {
+        "monitoring_instances": {
+          "cols": 2,
+          "path": "services.arms.monitoring_instances"
+        }
+      }
+    }
+  },
+  "devops": {
+    "cr": {
+      "resources": {
+        "repositories": {
+          "cols": 2,
+          "path": "services.cr.repositories"
+        }
+      }
+    },
+    "dmsenterprises": {
+      "resources": {
+        "migration_jobs": {
+          "cols": 2,
+          "path": "services.dmsenterprises.migration_jobs"
+        }
+      }
+    },
+    "api": {
+      "resources": {
+        "apis": {
+          "cols": 2,
+          "path": "services.api.regions.id.apis"
+        }
+      }
+    }
+  },
+  "analytics": {
+    "maxcompute": {
+      "resources": {
+        "projects": {
+          "cols": 2,
+          "path": "services.maxcompute.projects"
+        }
+      }
+    },
+    "dataworks": {
+      "resources": {
+        "projects": {
+          "cols": 2,
+          "path": "services.dataworks.projects"
+        }
+      }
+    }
+  },
+  "infrastructure": {
+    "kvstore": {
+      "resources": {
+        "instances": {
+          "cols": 2,
+          "path": "services.kvstore.regions.id.instances"
+        }
+      }
+    },
+    "redis": {
+      "resources": {
+        "instances": {
+          "cols": 2,
+          "path": "services.redis.regions.id.instances"
+        }
+      }
+    },
+    "memcache": {
+      "resources": {
+        "instances": {
+          "cols": 2,
+          "path": "services.memcache.regions.id.instances"
+        }
+      }
+    },
+    "mse": {
+      "resources": {
+        "clusters": {
+          "cols": 2,
+          "path": "services.mse.regions.id.clusters"
+        }
+      }
+    }
+  },
+  "iot": {
+    "iot": {
+      "resources": {
+        "projects": {
+          "cols": 2,
+          "path": "services.iot.projects"
         }
       }
     }

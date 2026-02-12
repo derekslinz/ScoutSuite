@@ -1,0 +1,16 @@
+{
+    "description": "Workflow without Error Handling",
+    "rationale": "Workflows should have proper error handling configurations and DLQ to prevent message loss.",
+    "dashboard_name": "Workflows",
+    "display_path": "fnf.workflows.id",
+    "path": "fnf.workflows.id",
+    "conditions": [
+        "and",
+        [
+            "fnf.workflows.id.has_failed_executions",
+            "true",
+            ""
+        ]
+    ],
+    "id_suffix": "name"
+}

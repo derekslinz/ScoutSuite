@@ -1,0 +1,42 @@
+{
+  "name": "RocketMQ Auth Disabled",
+  "description": "RocketMQ instances should have authentication enabled",
+  "id": "rocketmq-auth-disabled",
+  "remediation": "Enable authentication for RocketMQ instances",
+  "display_category": "Security Policies",
+  "severity": "danger",
+  "resource_idempotency_attributes": ["arn:aliyun:rocketmq:{region}:{account-id}:instance/{instance-id}"],
+  "rules": {
+    "filter": [
+      ["rocketmq", "instances", "{instance_id}", "EnableAuth"]
+    ],
+    "conditions": ["false"]
+  },
+  "tests": [
+    {
+      "name": "RocketMQ Auth Disabled Test",
+      "results": {
+        "pass_resource": {
+          "rocketmq": {
+            "instances": {
+              "inst-1": {
+                "arn": "arn:aliyun:rocketmq:cn-hangzhou:123456789012:instance/inst-1",
+                "EnableAuth": true
+              }
+            }
+          }
+        },
+        "fail_resource": {
+          "rocketmq": {
+            "instances": {
+              "inst-1": {
+                "arn": "arn:aliyun:rocketmq:cn-hangzhou:123456789012:instance/inst-1",
+                "EnableAuth": false
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

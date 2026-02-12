@@ -1,0 +1,20 @@
+{
+  "description": "Ensure DataWorks projects have resource isolation enabled",
+  "rationale": "Resource isolation prevents cross-project access to sensitive data",
+  "remediation": "Enable resource isolation for DataWorks projects",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "DataWorks",
+  "path": "dataworks.projects",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "resourceIsolationEnabled",
+      "false"
+    ]
+  ],
+  "id_suffix": "dataworks_isolation_disabled",
+  "level": "warning",
+  "resource_id_template": "{ProjectId}"
+}

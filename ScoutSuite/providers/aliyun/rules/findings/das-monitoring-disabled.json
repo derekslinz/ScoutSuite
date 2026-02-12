@@ -1,0 +1,20 @@
+{
+  "description": "Ensure DAS instances have performance monitoring enabled",
+  "rationale": "Performance monitoring helps identify and resolve database performance issues",
+  "remediation": "Enable performance monitoring for DAS instances",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "DAS",
+  "path": "das.instances",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "monitoringEnabled",
+      "false"
+    ]
+  ],
+  "id_suffix": "das_monitoring_disabled",
+  "level": "warning",
+  "resource_id_template": "{InstanceId}"
+}

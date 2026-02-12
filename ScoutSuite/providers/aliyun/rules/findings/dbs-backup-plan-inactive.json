@@ -1,0 +1,16 @@
+{
+    "description": "Database Backup Plan with No Recent Backups",
+    "rationale": "Backup plans should have recent successful backups to ensure data recovery capability.",
+    "dashboard_name": "Backup Plans",
+    "display_path": "dbs.backup_plans.id",
+    "path": "dbs.backup_plans.id",
+    "conditions": [
+        "and",
+        [
+            "dbs.backup_plans.id.status",
+            "notEqual",
+            "active"
+        ]
+    ],
+    "id_suffix": "plan_id"
+}

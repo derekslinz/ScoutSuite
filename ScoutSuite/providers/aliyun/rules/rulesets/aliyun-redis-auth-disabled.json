@@ -1,0 +1,42 @@
+{
+  "name": "Redis Auth Disabled",
+  "description": "Redis instances should have password authentication enabled",
+  "id": "redis-auth-disabled",
+  "remediation": "Enable password authentication for Redis instances",
+  "display_category": "Security Policies",
+  "severity": "danger",
+  "resource_idempotency_attributes": ["arn:aliyun:redis:{region}:{account-id}:instance/{instance-id}"],
+  "rules": {
+    "filter": [
+      ["redis", "instances", "{instance_id}", "AuthToken"]
+    ],
+    "conditions": ["empty"]
+  },
+  "tests": [
+    {
+      "name": "Redis Auth Disabled Test",
+      "results": {
+        "pass_resource": {
+          "redis": {
+            "instances": {
+              "inst-1": {
+                "arn": "arn:aliyun:redis:cn-hangzhou:123456789012:instance/inst-1",
+                "AuthToken": "test-token"
+              }
+            }
+          }
+        },
+        "fail_resource": {
+          "redis": {
+            "instances": {
+              "inst-1": {
+                "arn": "arn:aliyun:redis:cn-hangzhou:123456789012:instance/inst-1",
+                "AuthToken": null
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

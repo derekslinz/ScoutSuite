@@ -1,0 +1,21 @@
+{
+  "description": "Ensure VPC peering connections are in active state",
+  "rationale": "Inactive peering connections may indicate misconfiguration or security issues",
+  "remediation": "Review and activate or remove inactive VPC peering connections",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "VPCPeer",
+  "path": "vpcpeer.peering_connections",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "status",
+      "neq",
+      "ACTIVE"
+    ]
+  ],
+  "id_suffix": "vpcpeer_connection_inactive",
+  "level": "warning",
+  "resource_id_template": "{PeeringConnectionId}"
+}

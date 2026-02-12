@@ -1,0 +1,21 @@
+{
+  "description": "Ensure API Gateway APIs require authentication",
+  "rationale": "Unauthenticated APIs can be accessed by anyone and may expose sensitive data",
+  "remediation": "Enable authentication for all production APIs",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "API Gateway",
+  "path": "api.apis",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "authType",
+      "eq",
+      "ANONYMOUS"
+    ]
+  ],
+  "id_suffix": "api_gateway_unauthenticated",
+  "level": "danger",
+  "resource_id_template": "{ApiId}"
+}

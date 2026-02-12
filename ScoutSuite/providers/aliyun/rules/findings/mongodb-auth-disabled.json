@@ -1,0 +1,20 @@
+{
+  "description": "Ensure MongoDB instances have authentication enabled",
+  "rationale": "Authentication prevents unauthorized access to the database",
+  "remediation": "Enable authentication for MongoDB instances",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "MongoDB",
+  "path": "mongodb.instances",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "authEnabled",
+      "false"
+    ]
+  ],
+  "id_suffix": "mongodb_auth_disabled",
+  "level": "danger",
+  "resource_id_template": "{DBInstanceId}"
+}

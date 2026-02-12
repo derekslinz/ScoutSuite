@@ -1,0 +1,16 @@
+{
+    "description": "EBS Volume without Encryption",
+    "rationale": "All EBS volumes should be encrypted to protect data at rest.",
+    "dashboard_name": "Disks",
+    "display_path": "ebs.regions.id.disks.id",
+    "path": "ebs.regions.id.disks.id",
+    "conditions": [
+        "and",
+        [
+            "ebs.regions.id.disks.id.encrypted",
+            "false",
+            ""
+        ]
+    ],
+    "id_suffix": "disk_id"
+}

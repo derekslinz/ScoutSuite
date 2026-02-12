@@ -1,0 +1,20 @@
+{
+  "description": "Ensure DDS instances use encryption at rest",
+  "rationale": "Encryption at rest protects data from unauthorized access",
+  "remediation": "Enable encryption at rest for DDS instances",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "DDS",
+  "path": "dds.instances",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "encryptionEnabled",
+      "false"
+    ]
+  ],
+  "id_suffix": "dds_encryption_disabled",
+  "level": "danger",
+  "resource_id_template": "{DBInstanceId}"
+}

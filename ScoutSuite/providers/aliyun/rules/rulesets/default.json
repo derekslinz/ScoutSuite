@@ -147,6 +147,264 @@
                 "enabled": true,
                 "level": "warning"
             }
+        ],
+        "fc-function-without-role.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "fnf-workflow-with-failed-executions.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "eventbridge-event-bus-without-dlq.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "oos-template-without-version-control.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "ebs-volume-without-encryption.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "sgw-gateway-without-vpc.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "hbr-vault-without-encryption.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "dbs-backup-plan-inactive.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "smc-replication-job-failed.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "domain-auto-renewal-disabled.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "elasticsearch-encryption-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "alidns-dnssec-disabled.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "privatelink-endpoint-no-security-group.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "sts-mfa-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "vpcpeer-connection-inactive.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "das-monitoring-disabled.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "adb-backup-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "alikafka-ssl-disabled.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "mts-pipeline-no-notification.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "cloudsiem-data-source-disconnected.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "arms-no-alert-configuration.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "cr-image-scanning-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "dms-migration-job-failed.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "ack-rbac-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "api-gateway-unauthenticated.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "mse-audit-logging-disabled.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "dds-encryption-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "kvstore-no-auth.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "maxcompute-no-ip-whitelist.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "dataworks-isolation-disabled.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "expressconnect-inactive.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "acm-certificate-expired.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "mongodb-auth-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "sae-auth-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "drds-encryption-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "redis-auth-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "memcache-auth-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "ots-encryption-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "log-retention-disabled.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
+        ],
+        "kafka-encryption-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "rocketmq-auth-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "iot-device-isolation-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "polardbx-backup-disabled.json": [
+            {
+                "enabled": true,
+                "level": "warning"
+            }
         ]
     }
 }

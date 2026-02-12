@@ -1,0 +1,20 @@
+{
+  "description": "Ensure MTS pipelines have SNS notification enabled",
+  "rationale": "SNS notifications alert administrators to pipeline errors and failures",
+  "remediation": "Configure SNS topic for MTS pipeline notifications",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "MTS",
+  "path": "mts.pipelines",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "notifyTopicArn",
+      "empty"
+    ]
+  ],
+  "id_suffix": "mts_pipeline_no_notification",
+  "level": "warning",
+  "resource_id_template": "{Id}"
+}

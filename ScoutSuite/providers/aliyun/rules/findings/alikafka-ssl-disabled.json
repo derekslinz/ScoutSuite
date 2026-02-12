@@ -1,0 +1,20 @@
+{
+  "description": "Ensure Kafka instances have SSL enabled",
+  "rationale": "SSL encryption protects data in transit across the network",
+  "remediation": "Enable SSL for Kafka instance communications",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "AliKafka",
+  "path": "alikafka.instances",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "sslEnabled",
+      "false"
+    ]
+  ],
+  "id_suffix": "alikafka_ssl_disabled",
+  "level": "warning",
+  "resource_id_template": "{InstanceId}"
+}

@@ -1,0 +1,21 @@
+{
+  "description": "Ensure CloudSIEM data sources are actively connected",
+  "rationale": "Active data sources ensure continuous security monitoring and event collection",
+  "remediation": "Verify and reconnect any disconnected data sources in CloudSIEM",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "CloudSIEM",
+  "path": "cloudsiem.data_sources",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "status",
+      "neq",
+      "CONNECTED"
+    ]
+  ],
+  "id_suffix": "cloudsiem_data_source_disconnected",
+  "level": "warning",
+  "resource_id_template": "{InstanceId}"
+}

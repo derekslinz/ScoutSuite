@@ -1,0 +1,20 @@
+{
+  "description": "Ensure MSE clusters have audit logging enabled",
+  "rationale": "Audit logging tracks all actions for compliance and security investigation",
+  "remediation": "Enable audit logging for MSE clusters",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "MSE",
+  "path": "mse.clusters",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "auditLoggingEnabled",
+      "false"
+    ]
+  ],
+  "id_suffix": "mse_audit_logging_disabled",
+  "level": "warning",
+  "resource_id_template": "{ClusterId}"
+}

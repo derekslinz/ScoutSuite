@@ -1,0 +1,42 @@
+{
+  "name": "IoT Device Isolation Disabled",
+  "description": "IoT Platform projects should enforce device isolation",
+  "id": "iot-device-isolation-disabled",
+  "remediation": "Enable device isolation for IoT Platform projects",
+  "display_category": "Security Policies",
+  "severity": "danger",
+  "resource_idempotency_attributes": ["arn:aliyun:iot:cn-hangzhou:{account-id}:project/{project-id}"],
+  "rules": {
+    "filter": [
+      ["iot", "projects", "{project_id}", "EnableIsolation"]
+    ],
+    "conditions": ["false"]
+  },
+  "tests": [
+    {
+      "name": "IoT Device Isolation Disabled Test",
+      "results": {
+        "pass_resource": {
+          "iot": {
+            "projects": {
+              "proj-1": {
+                "arn": "arn:aliyun:iot:cn-hangzhou:123456789012:project/proj-1",
+                "EnableIsolation": true
+              }
+            }
+          }
+        },
+        "fail_resource": {
+          "iot": {
+            "projects": {
+              "proj-1": {
+                "arn": "arn:aliyun:iot:cn-hangzhou:123456789012:project/proj-1",
+                "EnableIsolation": false
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "description": "Ensure container repositories have image scanning enabled",
+  "rationale": "Image scanning detects vulnerabilities in container images before they are deployed",
+  "remediation": "Enable image scanning for all container repositories",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "CR",
+  "path": "cr.repositories",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "scanEnabled",
+      "false"
+    ]
+  ],
+  "id_suffix": "cr_image_scanning_disabled",
+  "level": "danger",
+  "resource_id_template": "{RepoId}"
+}

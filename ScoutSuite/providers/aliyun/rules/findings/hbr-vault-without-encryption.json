@@ -1,0 +1,16 @@
+{
+    "description": "Backup Vault without Encryption",
+    "rationale": "Backup vaults should have encryption enabled to protect backup data at rest.",
+    "dashboard_name": "Vaults",
+    "display_path": "hbr.vaults.id",
+    "path": "hbr.vaults.id",
+    "conditions": [
+        "and",
+        [
+            "hbr.vaults.id.encryption_key_id",
+            "null",
+            ""
+        ]
+    ],
+    "id_suffix": "vault_id"
+}

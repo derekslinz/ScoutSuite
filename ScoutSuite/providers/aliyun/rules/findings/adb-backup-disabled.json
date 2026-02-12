@@ -1,0 +1,21 @@
+{
+  "description": "Ensure ADB clusters have backup enabled",
+  "rationale": "Regular backups ensure data recovery in case of cluster failure or data loss",
+  "remediation": "Enable automated backup for ADB clusters",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "ADB",
+  "path": "adb.clusters",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "backupStatus",
+      "neq",
+      "ENABLED"
+    ]
+  ],
+  "id_suffix": "adb_backup_disabled",
+  "level": "danger",
+  "resource_id_template": "{DBClusterId}"
+}

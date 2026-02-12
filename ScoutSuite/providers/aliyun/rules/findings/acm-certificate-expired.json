@@ -1,0 +1,20 @@
+{
+  "description": "Ensure SSL/TLS certificates are not expired",
+  "rationale": "Expired certificates can cause service disruption and security warnings",
+  "remediation": "Renew expired certificates before expiration date",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "ACM",
+  "path": "acm.certificates",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "expired",
+      "true"
+    ]
+  ],
+  "id_suffix": "acm_certificate_expired",
+  "level": "danger",
+  "resource_id_template": "{CertId}"
+}

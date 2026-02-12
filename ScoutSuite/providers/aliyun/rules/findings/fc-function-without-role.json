@@ -1,0 +1,16 @@
+{
+    "description": "Function without IAM Role",
+    "rationale": "Functions should have explicit IAM roles assigned to control their permissions and access to other resources.",
+    "dashboard_name": "Functions",
+    "display_path": "fc.regions.id.services.id.functions",
+    "path": "fc.regions.id.services.id",
+    "conditions": [
+        "and",
+        [
+            "fc.regions.id.services.id.role_arn",
+            "null",
+            ""
+        ]
+    ],
+    "id_suffix": "name"
+}

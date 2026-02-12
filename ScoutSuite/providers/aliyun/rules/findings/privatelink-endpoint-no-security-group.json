@@ -1,0 +1,20 @@
+{
+  "description": "Ensure VPC endpoints have security groups configured",
+  "rationale": "Security groups control network access to VPC endpoints and should be properly configured",
+  "remediation": "Attach security groups to VPC endpoints to control inbound and outbound traffic",
+  "compliance": [],
+  "references": [],
+  "dashboard_name": "PrivateLink",
+  "path": "privatelink.vpc_endpoints",
+  "conditions": [
+    "and",
+    [
+      "result",
+      "securityGroups",
+      "empty"
+    ]
+  ],
+  "id_suffix": "privatelink_endpoint_no_security_group",
+  "level": "warning",
+  "resource_id_template": "{EndpointId}"
+}

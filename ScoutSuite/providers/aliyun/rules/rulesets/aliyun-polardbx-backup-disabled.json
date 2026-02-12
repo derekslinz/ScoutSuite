@@ -1,0 +1,42 @@
+{
+  "name": "PolarDB-X Backup Disabled",
+  "description": "PolarDB-X instances should have automated backups enabled",
+  "id": "polardbx-backup-disabled",
+  "remediation": "Enable automated backups for PolarDB-X instances",
+  "display_category": "Disaster Recovery",
+  "severity": "warning",
+  "resource_idempotency_attributes": ["arn:aliyun:polardbx:{region}:{account-id}:instance/{instance-id}"],
+  "rules": {
+    "filter": [
+      ["polardbx", "instances", "{instance_id}", "BackupRetentionDays"]
+    ],
+    "conditions": ["<", 7]
+  },
+  "tests": [
+    {
+      "name": "PolarDB-X Backup Disabled Test",
+      "results": {
+        "pass_resource": {
+          "polardbx": {
+            "instances": {
+              "inst-1": {
+                "arn": "arn:aliyun:polardbx:cn-hangzhou:123456789012:instance/inst-1",
+                "BackupRetentionDays": 30
+              }
+            }
+          }
+        },
+        "fail_resource": {
+          "polardbx": {
+            "instances": {
+              "inst-1": {
+                "arn": "arn:aliyun:polardbx:cn-hangzhou:123456789012:instance/inst-1",
+                "BackupRetentionDays": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

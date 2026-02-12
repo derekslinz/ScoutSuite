@@ -1,0 +1,16 @@
+{
+    "description": "Storage Gateway without VPC",
+    "rationale": "Storage Gateways should be deployed within a VPC for proper network isolation and security.",
+    "dashboard_name": "Gateways",
+    "display_path": "sgw.gateways.id",
+    "path": "sgw.gateways.id",
+    "conditions": [
+        "and",
+        [
+            "sgw.gateways.id.vswitch_id",
+            "null",
+            ""
+        ]
+    ],
+    "id_suffix": "gateway_id"
+}

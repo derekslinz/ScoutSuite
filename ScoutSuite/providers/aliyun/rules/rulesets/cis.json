@@ -123,6 +123,138 @@
                 "enabled": true,
                 "level": "danger"
             }
+        ],
+        "fc-function-without-role.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "ebs-volume-without-encryption.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "hbr-vault-without-encryption.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "elasticsearch-encryption-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "sts-mfa-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "adb-backup-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "cr-image-scanning-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "dms-migration-job-failed.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "ack-rbac-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "api-gateway-unauthenticated.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "dds-encryption-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "kvstore-no-auth.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "acm-certificate-expired.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "mongodb-auth-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "sae-auth-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "drds-encryption-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "redis-auth-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "memcache-auth-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "ots-encryption-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "kafka-encryption-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "rocketmq-auth-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
+        ],
+        "iot-device-isolation-disabled.json": [
+            {
+                "enabled": true,
+                "level": "danger"
+            }
         ]
     }
 }
